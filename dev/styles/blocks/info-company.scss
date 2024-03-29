@@ -1,0 +1,168 @@
+.info {
+	&-company {
+		padding: 30px 45px;
+		background: #fff;
+		margin-bottom: 70px;
+
+		&-description {
+			line-height: 1.67;
+			color: #121212;
+		}
+	}
+
+	&-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+
+		.company {
+			&-logo {
+				width: 22%;
+				display: flex;
+			    align-items: center;
+			    justify-content: center;
+			}
+			&-contact {
+				width: 52%;
+				padding: 0 20px;
+
+				h4 {
+					font-size: 30px;
+					font-weight: 600;
+					margin-bottom: 24px;
+				}
+
+				ul {
+					li {
+						position: relative;
+						font-size: 16px;
+						color: #121212;
+
+						&:not(:last-child) {
+							margin-bottom: 10px;
+						}
+
+						a {
+							text-decoration: none;
+							color: #121212;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+
+						&:first-child {
+							i {
+								margin-right: 15px;
+    							margin-left: 2px;
+							}
+						}
+
+						i {
+							color: #c1af8b;
+							font-size: 15px;
+							margin-right: 14px;
+						}
+					}
+				}
+			}
+			&-year {
+				width: 25%;
+
+				.bg {
+					position: relative;
+					width: 254px;
+					border-bottom-left-radius: 14px;
+					border-bottom-right-radius: 14px;
+					background-color: #58607e;
+					padding: 20px;
+					margin-bottom: 20px;
+					margin-top: -30px;
+
+					&:before {
+						content: '';
+					    display: block;
+					    position: absolute;
+					    bottom: -17px;
+					    left: 10px;
+					    right: 10px;
+					    width: 234px;
+					    height: 17px;
+					    border-left: 117px solid transparent;
+					    border-top: 17px solid #58607e;
+					    border-right: 117px solid transparent;
+					}
+				}
+
+				ul li {
+					color: #fff;
+					font-size: 16px;
+
+					&:not(:last-child) {
+						margin-bottom: 15px;
+					}
+
+					span {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		&-wrap {
+			.company {
+				&-logo {
+					width: 40%;
+					justify-content: flex-end;
+				}
+				&-contact {
+					width: 60%;
+				}
+				&-year {
+					width: 100%;
+
+					.bg {
+						margin-top: 30px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		&-wrap {
+			.company {
+				&-logo {
+					width: 100%;
+					justify-content: center;
+					margin-bottom: 30px;
+				}
+				&-contact {
+					width: 100%;
+					text-align: center;
+					margin-bottom: 30px;
+					padding-left: 0;
+				}
+				&-year{
+					.bg {
+						margin-top: 0;
+					}
+
+					ul li {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		&-company {
+			padding: 30px 15px;
+		}
+	}
+}

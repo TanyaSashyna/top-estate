@@ -1,0 +1,113 @@
+.card-specifications {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 30px;
+
+  &.build {
+    ul {
+      li {
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  ul {
+    width: 100%;
+    padding: 0;
+
+    li {
+      padding: 17px 0;
+      border-bottom: 1px solid #d1d1d1;
+      font-size: 14px;
+      font-weight: normal;
+      color: #959595;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .item-val {
+        text-align: right;
+        font-size: 16px;
+        color: #404852;
+      }
+    }
+  }
+
+  .title-block {
+    width: 100%;
+    padding-bottom: 0;
+
+    @media (min-width: 576px) {
+      h3 {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .landscaping {
+    padding-top: 30px;
+  }
+
+  @media (min-width: 576px) {
+    ul {
+      padding: 0 30px;
+
+      li {
+        font-size: 16px;
+
+        .item-val {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  @media (min-width:768px) {
+    padding-bottom: 60px;
+
+    ul {
+      width: 50%;
+    }
+  }
+
+   @media (max-width:767px) {
+    &.build {
+      ul {
+        &:first-child {
+          li {
+            border-bottom: 1px solid #d1d1d1;
+          }
+        }
+      }
+    }
+   }
+}
+
+.more,
+.read-more {
+  text-decoration: none;
+  font-size: 14px;
+  color: #3376ca;
+
+  .no-touch & {
+    &:hover {
+      color: #b9a787;
+    }
+  }
+  @media (min-width:768px) {
+    font-size: 16px;
+  }
+}
+
+.read-more {
+  position: absolute;
+  bottom: -20px;
+  right: 30px;
+  @media (max-width:768px) {
+    right: 0;
+  }
+}

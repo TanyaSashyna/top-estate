@@ -1,0 +1,93 @@
+.conditions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0;
+
+  .item {
+    flex-basis: 165px;
+    text-align: center;
+    margin: 0 40px 0;
+
+    .icon {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 69px;
+      margin-bottom: 23px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .businessmen {
+      width: 70px;
+      height: 66px;
+    }
+
+    .camera {
+      width: 73px;
+      height: 60px;
+    }
+
+    .file {
+      width: 48px;
+      height: 60px;
+    }
+
+    .business-agreement {
+      width: 69px;
+      height: 69px;
+    }
+
+    .house-value {
+      width: 68px;
+      height: 62px;
+    }
+
+    .megaphone-1 {
+      width: 70px;
+      height: 63.5px;
+    }
+
+    .house-visiting {
+      width: 92px;
+      height: 61px;
+    }
+    .man {
+      width: 64px;
+      height: 62px;
+    }
+
+    .contract {
+      width: 62px;
+      height: 60px;
+    }
+  }
+
+  @media (max-width: 1023px){
+    .item {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 767px){
+    .item {
+      margin-bottom: 20px;
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}

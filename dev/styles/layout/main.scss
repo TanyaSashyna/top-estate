@@ -1,0 +1,67 @@
+.main-tw {
+	padding-bottom: 90px;
+	display: flex;
+	&-content {
+		width: 51.7%;
+		padding: 0 30px;
+		.event-option {
+			@media(max-width: 1279px) {
+				a {
+					font-size: 13px;
+					i {
+						margin-right: 2px;
+					}
+				}
+			}
+			@media(max-width: 1023px) {
+				a {
+					padding: 3px 2px;
+					i {
+						font-size: 19px;
+					}
+				}
+			}
+		}
+
+	}
+	&-map {
+		width: 48.3%;
+		overflow: hidden;
+		position: relative;
+		#map {
+			height: 100vh!important;
+			z-index: 1;
+			min-height: 400px;
+			@media (max-width: 767px) {
+				height: calc(100vh - 148px) !important;
+			}
+		}
+	}
+	.pagination {
+		padding-top: 56px;
+		padding-bottom: 20px;
+	}
+	@media (max-width: 1200px) {
+		&-content {
+			padding: 0 20px;
+		}
+	}
+	@media (max-width: 1023px) {
+		padding-bottom: 40px;
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		padding-bottom: 0;
+		&-content {
+			display: none;
+			padding: 0 20px;
+			width: 100%;
+			.pagination {
+				padding-top: 20px;
+			}
+		}
+		&-map {
+			width: 100%;
+		}
+	}
+}

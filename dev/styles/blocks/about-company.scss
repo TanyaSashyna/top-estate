@@ -1,0 +1,50 @@
+.about-company {
+  padding: 14px 0 90px;
+
+  .about-content {
+    display: block;
+
+    .about-text {
+      padding: 0;
+
+      p {
+        margin-bottom: 25px;
+        text-align: center;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+    img {
+      max-width: 412px;
+      width: 100%;
+      margin: 0 auto 30px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .about-content {
+      display: flex;
+      align-items: center;
+
+      .about-text {
+        order: 1;
+        padding-right: 70px;
+
+        p {
+          text-align: left;
+        }
+      }
+
+      img {
+        order: 2;
+        margin: 0;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 50px;
+  }
+}

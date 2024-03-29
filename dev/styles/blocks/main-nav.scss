@@ -1,0 +1,126 @@
+.main-nav {
+	&-list {
+		display: flex;
+		font-family: 'CenturyGothic', Arial, sans-serif;
+		> li {
+			position: relative;
+			display: flex;
+			> a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				color: #fff;
+				text-decoration: none;
+				font-size: 14px;
+				line-height: 1.2;
+				padding: 21px 20px 23px;
+			}
+			.no-touch & {
+				&:hover {
+					> a {
+						color: #c1af8b;
+					}
+				}
+			}
+			&:hover {
+				.main-nav-drop {
+					display: block;
+				}
+			}
+		}
+	}
+	&-drop {
+		position:absolute;
+		top:100%;
+		left:0;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+		background: #58607e;
+		padding: 22px 23px;
+		width: 166px;
+		display: none;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 18px;
+			}
+		}
+		a {
+			display:inline-block;
+			vertical-align:top;
+			color: #fff;
+			text-decoration: none;
+			font-size: 13px;
+			line-height: 1.2;
+			.no-touch & {
+				&:hover {
+					color: #c1af8b;
+				}
+			}
+		}
+	}
+	@media (max-width: 1023px) {
+		display: none;
+	}
+}
+
+.nf-nav {
+	padding: 0 20px;
+	.main-nav-list {
+		display: block;
+		> li {
+			> a {
+				font-weight: 600;
+			}
+		}
+		li {
+			display: block;
+			text-align: center;
+			margin: 20px 0 0 !important;
+			font-size: 18px;
+			a {
+				font-size: 17px; 
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.main-nav-drop {
+				display: block !important;
+				position: static !important;
+				width: 100% !important;
+				background: transparent !important;
+				box-shadow: none !important; 
+				padding: 20px 0 0 !important;
+				li {
+					margin: 0 0 10px !important;
+					a {
+						color: #000;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sm-links-list {
+	padding: 0 20px;
+	margin: 30px 0 0;
+	li {
+		text-align: center;
+		margin: 0 0 28px;
+		font-size: 18px;
+		a {
+			font-size: 17px;
+			padding: 0;
+			margin: 0;
+			color: #000;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

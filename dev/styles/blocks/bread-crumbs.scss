@@ -1,0 +1,32 @@
+.bread-crumbs {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    padding-top: 10px;
+    margin-bottom: 46px;
+
+    li {
+      display: inline-block;
+      font-family: CenturyGothic;
+      font-size: 13px;
+      padding-right: 3px;
+
+      a {
+        text-decoration: none;
+        color: #a0a0a0;
+
+        &:after {
+          content: '/';
+          padding-left: 4px;
+        }
+
+        .no-touch & {
+          &:hover {
+            color: #c1af8b;
+          }
+        }
+      }
+    }
+  }
+}

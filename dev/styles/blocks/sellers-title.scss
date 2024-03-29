@@ -1,0 +1,36 @@
+.sellers-title {
+  text-align: center;
+
+  .number {
+    margin-bottom: 14px;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: rgba(64, 72, 82, 0.2);
+  }
+
+  .title-head {
+    padding-bottom: 25px;
+
+    h3 {
+      margin-bottom: 35px;
+
+      a {
+        text-decoration: none;
+        color: #404852;
+        border-bottom: 1px dashed #404852;
+
+        .no-touch & {
+          &:hover {
+            color: #c1af8b;
+            border-color: #c1af8b;
+          }
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 35px;
+    }
+  }
+}

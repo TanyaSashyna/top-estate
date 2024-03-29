@@ -1,0 +1,19 @@
+.social-networks {
+	display: flex;
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #adadad;
+		font-size: 16px;
+		line-height: 1;
+		width: 25px;
+		height: 25px;
+		text-decoration: none;
+		.no-touch & {
+			&:hover {
+				color: #c1af8b;
+			}
+		}
+	}
+}

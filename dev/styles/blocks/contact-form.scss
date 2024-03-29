@@ -1,0 +1,169 @@
+.contact-section {
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	min-height: 311px;
+	&-img {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		min-width: 101%;
+		min-height: 101%;
+		max-width: none;
+		width: auto;
+		z-index: -1;
+	}
+	h2 {
+		color: #fff;
+		font-size: 42px;
+		line-height: 1.2;
+		font-family: 'Athelas Bold', Arial, sans-serif;
+		margin: 0 0 26px;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+	h3 {
+		font-family: 'CenturyGothic', Arial, sans-serif;
+		font-size: 25px;
+		line-height: 1.2;
+		margin: 0 0 45px;
+		color: #fff;
+		font-weight: normal;
+		strong {
+			white-space: nowrap;
+		}
+	}
+	&.contact-section-type2 {
+		padding-bottom: 34px;
+		h2 {
+			font-family: 'CenturyGothic Bold', Arial, sans-serif;
+			font-size: 30px;
+			font-weight: normal;
+			margin-bottom: 22px;
+		}
+		h3 {
+			margin-bottom: 33px;
+		}
+	}
+	@media (max-width: 1023px) {
+		padding-bottom: 40px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		h2 {
+			font-size: 28px;
+			margin-bottom: 15px;
+		}
+		h3 {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+		&.contact-section-type2 {
+			padding-bottom: 20px;
+			h2 {
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+			h3 {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.contact-form {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 1000px;
+
+	.wpcf7-not-valid-tip {
+		font-size: 14px;
+		color: #ff0000;
+	}
+	+ .wpcf7-validation-errors {
+		font-size: 14px;
+		color: #ff2222;
+		padding: 12px 0 0;
+	}
+	&-col {
+		flex: 1;
+		padding: 0 25px;
+
+		input {
+			margin-bottom: 7px;
+		}
+
+		.error {
+			display: block;
+			font-family: 'CenturyGothic', Arial, sans-serif;
+  			font-size: 13px;
+  			text-align: center;
+  			color: #ff2121;
+		}
+	}
+	&-field {
+		background: #fff;
+		border: 1px solid #58607e;
+		height: 50px;
+		padding: 0 37px;
+		color: #404852;
+		font-family: 'CenturyGothic', Arial, sans-serif;
+		font-size: 15px;
+		width: 100%;
+		&::-webkit-input-placeholder {
+			color: #828282;
+		}
+		&::-moz-placeholder {
+			opacity: 1;
+			color: #828282;
+		}
+		&:-ms-input-placeholder {
+			color: #828282;
+		}
+	}
+	.btn {
+		white-space: nowrap;
+		padding: 16px 48px;
+	}
+	.error-form {
+		width: 100%;
+		font-family: 'CenturyGothic', Arial, sans-serif;
+	    font-size: 13px;
+	    font-weight: 700;
+	    line-height: 1.23;
+	    color: #ffffff;
+	    text-align: left;
+	    margin-top: 8px;
+	}
+	@media (max-width: 1023px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		&-col {
+			width: 50%;
+			padding-bottom: 20px;
+			flex: none;
+		}
+		.error-form {
+			padding: 0 25px;
+		}
+	}
+	@media (max-width: 767px) {
+		margin: 0 -25px;
+		&-col {
+			width: 100%;
+			padding-bottom: 10px;
+		}
+		&-field {
+			height: 40px;
+		}
+		.btn {
+			padding: 12px;
+			width: 100%;
+		}
+	}
+}

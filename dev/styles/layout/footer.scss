@@ -1,0 +1,208 @@
+.footer {
+    font-family: CenturyGothic, sans-serif;
+    color: #fff;
+    font-size: 13px;
+    &-top {
+        padding: 44px 0 31px;
+        background: #33384c;
+        .footer-row {
+            margin: 0 -55px;
+        }
+    }
+    &-bottom {
+        padding: 10px 0;
+        background: #c1af8b;
+        .footer-row {
+            position: relative;
+            justify-content: center;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-col {
+        width: 25%;
+        padding: 0 55px;
+        &:last-child {
+            padding: 0 10px;
+        }
+    }
+    &-links {
+        li {
+            margin: 0 0 11px;
+        }
+    }
+    &-contacts {
+        margin: 0 0 20px -27px;
+        li {
+            margin: 0 0 11px;
+            a {
+                position: relative;
+                padding: 0 0 0 27px;
+                i {
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    font-size: 14px;
+                    color: #c1af8b;
+                } 
+            }
+        }
+    }
+    h3 {
+        font-family: 'CenturyGothic Bold', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        margin: 0 0 20px;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            color: #c1af8b;
+        }
+    }
+    .social-networks {
+        a {
+            color: #adadad;
+            &:hover {
+                color: #c1af8b;
+            }
+        }
+    }
+    .jcf-select {
+        width: 185px;
+        margin: 0 0 34px;
+    }
+    .links-list {
+        li {
+           margin: 0 0 20px;
+           font-family: 'CenturyGothic Bold', sans-serif;
+           font-weight: 700;   
+        }
+    }
+    .develop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        a {
+            color: #33384c;
+        }
+    }
+    .anchor-top {
+        position: fixed;
+        right: 47px;
+        bottom: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 46px;
+        height: 44px; 
+        background: #5e5e5e;
+        border: none;
+        outline: none;
+        transition: .2s;
+        z-index: 9;
+        &:hover {
+            background: #c1af8b;
+            i {
+                color: #fff;
+            }
+        }
+        i {
+            color: #9fa6a7;
+            transition: .2s;
+            transform: scale(-1);
+        }
+    }
+    @media(max-width: 1280px) {
+        &-top {
+            .footer-row {
+                margin: 0 -10px;
+            }
+        }
+        &-col {
+            padding: 0 10px;
+        }
+    }
+    @media(max-width: 1023px) and (min-width: 768px) {
+        &-top {
+            .footer-row {
+                margin: 0 -30px;
+            }
+        }
+        &-col {
+            width: 50%;
+            padding: 0 30px 20px;
+            &:nth-child(1) {
+                order: 3;
+                padding: 0 30px 0;
+            }
+            &:nth-child(2) {
+                order: 1;
+            }
+            &:nth-child(3) {
+                order: 2;
+            }
+            &:nth-child(4) {
+                order: 4;
+                padding: 0 30px 0;
+            }
+        }
+        &-contacts {
+            margin: 0 0 20px 0;
+        }
+    }
+    @media(max-width: 767px) {
+        &-top {
+            padding: 20px 0;
+            .footer-row {
+                margin: 0;
+            }
+        }
+        &-col {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            &:nth-child(4) {
+                padding: 0;
+            }
+        }
+        .anchor-top {
+            display: none;
+        }
+        &-contacts {
+            margin: 0 0 20px 0;
+        }
+        .jcf-select {
+            margin: 0 auto 20px;
+        }
+        .social-networks {
+            margin: 0;
+            justify-content: center;
+        }
+        .develop {
+            width: 100%;
+            position: static;
+            text-align: center;
+            margin: 0 0 10px;
+        }
+        &-nav {
+            &-opener {
+                position: relative;
+                &:after {
+                    font-family: 'icomoon';
+                    font-size: 5px;
+                    margin-left: 6px;
+                    position: relative;
+                    top: -1px;
+                    content: '\e902';
+                }
+            }
+        }
+    }
+}

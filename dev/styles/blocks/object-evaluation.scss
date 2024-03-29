@@ -1,0 +1,37 @@
+.object-evaluation {
+  .airplane2 {
+    display: none;
+  }
+
+  @media (min-width: 1151px) {
+    .airplane2 {
+      display: block;
+      position: absolute;
+      top: 130px;
+      right: 0;
+    }
+  }
+
+  .you-get {
+    padding: 0;
+
+    .content {
+      .info-list {
+        ul {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .btn-block {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  @media (min-width: 768px) {
+    .btn-block {
+      padding: 60px 0 110px;
+    }
+  }
+}

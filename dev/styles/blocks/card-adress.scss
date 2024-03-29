@@ -1,0 +1,171 @@
+.card-address {
+    .content-cnt {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    &-info {
+        width: 100%;
+        padding: 0 15px 15px;
+        color: #404852;
+        h3 {
+            margin: 0 0 14px;
+            font-size: 21px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 18px;
+            margin: 0 0 13px;
+        }
+        a {
+            font-size: 18px;
+            font-weight: 600;
+            color: #404852;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .icon-apartments {
+            font-size: 38px;
+            position: relative;
+            bottom: -10px;
+        }
+    }
+    &-actions {
+        margin-top: 38px;
+        li {
+            position: relative;
+            padding: 0 0 0 47px;
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+            &.route {
+                padding: 0;
+                margin-bottom: 43px;
+                text-transform: uppercase;
+                a {
+                    font-size: 18px;
+                    padding: 0 0 0 47px;
+                    text-decoration: none;
+                    &::before {
+                        content: '\e925';
+                        position: absolute;
+                        top: -2px;
+                        left: 0;
+                        font-family: 'icomoon925' !important;
+                        font-size: 30px;
+                        speak: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                }
+            }  
+            &.subway {
+                &::before {
+                    content: '\e916';
+                    position: absolute;
+                    top: -3px;
+                    left: 0;
+                    font-family: 'icomoon' !important;
+                    font-size: 24px;
+                    speak: none;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                }
+                &.bl::before {
+                    color: #264add;
+                }
+                &.rd::before {
+                    color: #1e8413;
+                }
+            }
+        }
+        .description {
+            display: flex;
+            justify-content: space-between;
+            &-info {
+                font-size: 16px;
+                color: #404852;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-left: 10px;
+                margin-top: -4px;
+                white-space: nowrap;
+
+                .icon-walk {
+                    margin-right: 10px;
+                    font-size: 23px;
+                    color: #959595;
+                }
+            }
+        }
+
+    }
+    &-map {
+        width: 100%;
+        padding: 0 15px;
+        .leaflet-control-location {
+            display: none;
+        }
+    }
+    #map {
+        height: 300px;
+    }
+
+    @media (min-width: 576px) {
+        .content-cnt {
+            padding: 0 24px;
+        }
+
+        &-info {
+            h3 {
+                font-size: 25px;
+            }
+        }
+
+        &-actions {
+            li {
+                &.route {
+                    a {
+                        font-size: 21px;
+                    }
+                }
+            }
+
+            .description {
+                &-info {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        &-info,
+        &-map {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    @media (min-width:768px) {
+        &-info {
+            width: 46%;
+        }
+        &-map{
+            width: 54%;
+        }
+        &-info {
+            padding: 5px 15px 0;
+        }
+    }
+}

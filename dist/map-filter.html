@@ -1,0 +1,1495 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Top Estate</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<style>
+		.loader {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #33384c;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+		}
+
+		.loader .loader-inner {
+			text-align: center;
+		}
+
+		.loader .logo {
+			width: 350px;
+		}
+
+		.loader .gif {
+			width: 50px;
+			margin: 0 auto;
+		}
+
+		@media (max-width: 767px) {
+			.loader .logo {
+				width: 180px;
+			}
+
+			.loader .gif {
+				width: 45px;
+			}
+		}
+	</style>
+</head>
+
+<body class="map-filter">
+	<div class="loader">
+		<div class="loader-inner">
+			<div class="logo"><img src="img/logo.png" alt="Top Estate"></div>
+			<img src="img/loader.gif" class="gif" alt="Top Estate">
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="header-wrap">
+			<header class="header">
+				<div class="container">
+					<div class="header-l">
+						<div class="header-bar">
+							<ul class="social-networks">
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-instagram"></i></a></li>
+							</ul>
+							<div class="currency-change-wrap">
+								<form action="/" class="currency-change" method="POST">
+									<select class="currency custom-sel" name="currency">
+										<option value="usd">usd</option>
+										<option value="ua" selected>uah</option>
+										<option value="euro">Eur</option>
+									</select>
+								</form>
+							</div>
+						</div>
+						<a href="#" class="favorites-link">Избранное <span>(10)</span></a>
+						<a href="#popup4" class="btn btn-default btn-sm" data-fancybox>онлайн оценка</a>
+					</div>
+					<div class="header-c">
+						<a class="logo" href="#"><img src="img/logo.png" alt="Top Estate"></a>
+						<button type="button" class="mobile-menu-opener"><span></span></button>
+						<nav class="main-nav">
+							<ul class="main-nav-list">
+								<li><a href="about-company.html">О компании</a></li>
+								<li>
+									<a class="main-nav-opener" href="#">Услуги</a>
+									<ul class="main-nav-drop">
+										<li><a href="services-for-sellers.html">Для продавца</a></li>
+										<li><a href="customer-services.html">Для покупателя</a></li>
+										<li><a href="services-companies.html">Для застройщика</a></li>
+									</ul>
+								</li>
+								<li>
+									<a class="main-nav-opener" href="#">Квартиры</a>
+									<ul class="main-nav-drop">
+										<li><a href="#">С ремонтом</a></li>
+										<li><a href="#">Строительное состояние</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Разместить квартиру</a></li>
+								<li><a href="blog.html">Блог</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-r">
+						<div class="contact">
+							<div class="contact-list">
+								<a href="tel:+380631067676" class="contact-list-opener">+38 (063) 106 76 76</a>
+								<ul class="contact-list-slide">
+									<li><a href="tel:+380631067676">+38 (063) 106 76 76</a></li>
+									<li><a href="tel:+380631067676">+38 (063) 106 76 76</a></li>
+								</ul>
+							</div>
+							<a href="mailto:topestate@email.com" class="contact-email">topestate@email.com</a>
+						</div>
+						<a href="#" class="btn btn-default btn-s">Заказать звонок</a>
+					</div>
+				</div>
+				<div class="mobile-menu"></div>
+			</header>
+			<div class="filter filter-slider">
+				<div class="container">
+					<div class="filter-slide">
+						<div class="filter-head">
+							<h2 class="search-location">Поиск недвижимости в
+								<select class="city custom-sel">
+									<option value="harkov">Харькове</option>
+									<option value="kiev">Киеве</option>
+									<option value="odessa">Одессе</option>
+								</select>
+							</h2>
+							<form action="#" class="search">
+								<button type="submit" class="search-btn"><i class="icon-magnifier"></i></button>
+								<input type="text" class="search-field"
+									placeholder="Поиск по ключевому слову или по номеру объекта">
+							</form>
+							<button type="button" class="filter-menu-opener"></button>
+						</div>
+
+						<form action="/map-filter.html" id="filter-form">
+							<ul class="filter-menu">
+								<li class="filter-section" data-filter="type">
+									<a class="filter-opener" href="#">тип объекта</a>
+									<span class="description">Не выбран</span>
+									<div class="filter-drop">
+										<strong class="filter-title">количество комнат</strong>
+										<div class="filter-room">
+											<div class="filter-room-item">
+												<i class="icon-bed"></i>
+											</div>
+											<div class="filter-room-item">
+												<input type="checkbox" checked id="cn-01" value="1" name="type">
+												<label for="cn-01">1</label>
+											</div>
+											<div class="filter-room-item">
+												<input type="checkbox" checked id="cn-02" value="2" name="type">
+												<label for="cn-02">2</label>
+											</div>
+											<div class="filter-room-item">
+												<input type="checkbox" id="cn-03" value="3" name="type">
+												<label for="cn-03">3</label>
+											</div>
+											<div class="filter-room-item">
+												<input type="checkbox" id="cn-04" value="4+" name="type">
+												<label for="cn-04">4+</label>
+											</div>
+										</div>
+										<div class="filter-room-list">
+											<div class="filter-room-item">
+												<input type="checkbox" id="cn-05" value="Кухня студия" name="type">
+												<label for="cn-05">Кухня студия</label>
+											</div>
+											<div class="filter-room-item">
+												<input type="checkbox" id="cn-06" checked value="Пентхаус" name="type">
+												<label for="cn-06">Пентхаус</label>
+											</div>
+											<div class="filter-room-item">
+												<input type="checkbox" id="cn-07" value="Двухуровневые" name="type">
+												<label for="cn-07">Двухуровневые</label>
+											</div>
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="districts">
+									<a class="filter-opener" href="#">Район</a>
+									<span class="description">Все районы</span>
+									<div class="filter-drop">
+										<div class="multi-select-wrap">
+											<div class="jcf-scrollable">
+												<ul class="multi-select">
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-08" checked value="Алексеевка"
+															name="district">
+														<label for="cn-08">Алексеевка</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-09" checked value="Павлово поле"
+															name="district">
+														<label for="cn-09">Павлово поле</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-10" value="Центр" name="district">
+														<label for="cn-10">Центр</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-11" value="421 м/р, Павловка"
+															name="district">
+														<label for="cn-11">421 м/р, Павловка</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-12" value="Гагарина"
+															name="district">
+														<label for="cn-12">Гагарина</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-13" value="Спортивная"
+															name="district">
+														<label for="cn-13">Спортивная</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-14" value="Восстания"
+															name="district">
+														<label for="cn-14">Восстания</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-15" value="Киевская"
+															name="district">
+														<label for="cn-15">Киевская</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-16" value="Песочин"
+															name="district">
+														<label for="cn-16">Песочин</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-17" value="ХТЗ" name="district">
+														<label for="cn-17">ХТЗ</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-18" value="Новые Дома"
+															name="district">
+														<label for="cn-18">Новые Дома</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-19" value="Салтовка"
+															name="district">
+														<label for="cn-19">Салтовка</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-20" value="Северная Салтовка"
+															name="district">
+														<label for="cn-21">Северная Салтовка</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-22" value="Холодная Гора"
+															name="district">
+														<label for="cn-22">Холодная Гора</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-23" value="Белгородское шоссе"
+															name="district">
+														<label for="cn-23">Белгородское шоссе</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="metro">
+									<a class="filter-opener" href="#">СТ. МЕТРО</a>
+									<span class="description">5 станций</span>
+									<div class="filter-drop">
+										<div class="multi-select-wrap">
+											<div class="jcf-scrollable">
+												<strong class="multi-select-title">Холодногорско-Заводская</strong>
+												<ul class="multi-select">
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-24" value="Холодная гора"
+															name="metro">
+														<label for="cn-24">Холодная гора</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-25" value="Южный вокзал"
+															name="metro">
+														<label for="cn-25">Южный вокзал</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-26" value="Центральный рынок"
+															name="metro">
+														<label for="cn-26">Центральный рынок</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-27" value="Советская"
+															name="metro">
+														<label for="cn-27">Советская</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-28" value="Проспект Гагарина"
+															name="metro">
+														<label for="cn-28">Проспект Гагарина</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-29" value="Спортивная"
+															name="metro">
+														<label for="cn-29">Спортивная</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-30" value="Завод им. Малышева"
+															name="metro">
+														<label for="cn-30">Завод им. Малышева</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-31" value="Московский проспект"
+															name="metro">
+														<label for="cn-31">Московский проспект</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-32" value="Маршала Жукова"
+															name="metro">
+														<label for="cn-32">Маршала Жукова</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-33" value="Советской Армии"
+															name="metro">
+														<label for="cn-33">Советской Армии</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-34"
+															value="Имени А. С. Масельского" name="metro">
+														<label for="cn-34">Имени А. С. Масельского</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-35" value="Тракторный завод"
+															name="metro">
+														<label for="cn-35">Тракторный завод</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-36" value="Пролетарская"
+															name="metro">
+														<label for="cn-36">Пролетарская</label>
+													</li>
+												</ul>
+												<strong
+													class="multi-select-title multi-select-title_bl">Салтовская</strong>
+												<ul class="multi-select">
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-37" value="Исторический музей"
+															name="metro">
+														<label for="cn-37">Исторический музей</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-38" value="Университет"
+															name="metro">
+														<label for="cn-38">Университет</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-39" value="Пушкинская"
+															name="metro">
+														<label for="cn-39">Пушкинская</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-40" value="Киевская" name="metro">
+														<label for="cn-40">Киевская</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-41" value="Академика Барабашова"
+															name="metro">
+														<label for="cn-41">Академика Барабашова</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-42" value="Академика Павлова"
+															name="metro">
+														<label for="cn-42">Академика Павлова</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-43" value="Студенческая"
+															name="metro">
+														<label for="cn-43">Студенческая</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-44" value="Героев труда"
+															name="metro">
+														<label for="cn-44">Героев труда</label>
+													</li>
+												</ul>
+												<strong class="multi-select-title">Алексеевская</strong>
+												<ul class="multi-select">
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-45" checked
+															value="Метростроителей им. Ващенко" name="metro">
+														<label for="cn-45">Метростроителей им. Ващенко</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-46" checked
+															value="Площадь Восстания" name="metro">
+														<label for="cn-46">Площадь Восстания</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-47" value="Архитектора Бекетова"
+															name="metro">
+														<label for="cn-47">Архитектора Бекетова</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-48" value="Госпром" name="metro">
+														<label for="cn-48">Госпром</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-49" value="Научная" name="metro">
+														<label for="cn-49">Научная</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-50" value="Ботанический сад"
+															name="metro">
+														<label for="cn-50">Ботанический сад</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-51" value="23 Августа"
+															name="metro">
+														<label for="cn-51">23 Августа</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-52" value="Алексеевская"
+															name="metro">
+														<label for="cn-52">Алексеевская</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="area">
+									<a class="filter-opener" href="#">Площадь</a>
+									<span class="description">Не выбран</span>
+									<div class="filter-drop filter-drop-area">
+										<div class="range-slider">
+											<div class="filter-fromto">
+												<div class="fromto-item">
+													<div class="fromto-input">
+														<input type="text" class="area min" name="area" placeholder="от" value="90" />
+														<div class="fromto-arrows">
+															<div class="arrow-up"></div>
+															<div class="arrow-down"></div>
+														</div>
+													</div>
+												</div>
+												<div class="fromto-item">
+													<div class="fromto-input">
+														<input type="text" class="area max" name="area" placeholder="до" value="150" />
+														<div class="fromto-arrows">
+															<div class="arrow-up"></div>
+															<div class="arrow-down"></div>
+														</div>
+													</div>
+												</div>
+											</div>											
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="price">
+									<a class="filter-opener" href="#">Цена</a>
+									<span class="description">$ 0 - 250 000</span>
+									<div class="filter-drop filter-drop-price">
+										<div class="range-slider">
+											<div class="filter-currency">
+												<div class="currency-item">
+													<input type="radio" name="currency" id="usd" value="usd" checked hidden/>
+													<label for="usd">Usd</label>
+												</div>
+												<div class="currency-item">
+													<input type="radio" name="currency" id="uah" value="ua" hidden/>
+													<label for="uah">uah</label>
+												</div>
+												<div class="currency-item">
+													<input type="radio" name="currency" id="eur" value="euro" hidden/>
+													<label for="eur">Eur</label>
+												</div>
+											</div>
+											<div class="filter-fromto">
+												<div class="fromto-item">
+													<div class="fromto-input">
+														<input type="text" class="price min" placeholder="от" name="price" value="50000"/>
+														<div class="fromto-arrows">
+															<div class="arrow-up"></div>
+															<div class="arrow-down"></div>
+														</div>
+													</div>
+												</div>
+												<div class="fromto-item">
+													<div class="fromto-input">
+														<input type="text" class="price max" placeholder="до" name="price" value="100000" />
+														<div class="fromto-arrows">
+															<div class="arrow-up"></div>
+															<div class="arrow-down"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="condition">
+									<a class="filter-opener" href="#">Состояние</a>
+									<span class="description">С ремонтом</span>
+									<div class="filter-drop">
+										<div class="filter-room-list">
+											<div class="filter-room-item">
+												<input type="radio" id="cn-53" name="condition" value="С ремонтом"
+													checked>
+												<label for="cn-53">С ремонтом</label>
+											</div>
+											<div class="filter-room-item">
+												<input type="radio" id="cn-54" name="condition"
+													value="Строительное состояние">
+												<label for="cn-54">Строительное состояние</label>
+											</div>
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="complex">
+									<a class="filter-opener" href="#">ЖК</a>
+									<span class="description">Не выбран</span>
+									<div class="filter-drop">
+										<div class="multi-select-wrap">
+											<div class="jcf-scrollable">
+												<ul class="multi-select">
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-55" checked name="complex"
+															value="Дуэт">
+														<label for="cn-55">Дуэт</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-56" checked name="complex"
+															value="Элегант">
+														<label for="cn-56">Элегант</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-57" name="complex"
+															value="Воробьевы горы">
+														<label for="cn-57">Воробьевы горы</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-58" name="complex"
+															value="Британский дом">
+														<label for="cn-58">Британский дом</label>
+													</li>
+													<li class="multi-select-item">
+														<input type="checkbox" id="cn-59" name="complex"
+															value="Лазурный">
+														<label for="cn-59">Лазурный</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="years">
+									<a class="filter-opener" href="#">год постройки</a>
+									<span class="description">2000 - 2010</span>
+									<div class="filter-drop filter-drop-date">
+										<div class="range-slider">
+											<div class="filter-year">
+												<ul>
+													<li>
+														<input type="radio" name="years" id="build-1" checked value="2021,2021"
+															hidden />
+														<label for="build-1">2021</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-2" value="2020,2020"
+															hidden />
+														<label for="build-2">2020</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-3" value="2019,2019"
+															hidden />
+														<label for="build-3">2019</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-4" value="2018,2018"
+															hidden />
+														<label for="build-4">2018</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-5"
+															value="2016,2017" hidden />
+														<label for="build-5">2016-2017</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-6"
+															value="2010,2015" hidden />
+														<label for="build-6">2010-2015</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-7"
+															value="2005,2009" hidden />
+														<label for="build-7">2005-2009</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-8"
+															value="2000,2004" hidden />
+														<label for="build-8">2000-2004</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-9"
+															value="1990,1999" hidden />
+														<label for="build-9">1990-1999</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-10"
+															value="1980,1989" hidden />
+														<label for="build-10">1980-1989</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-11"
+															value="1960,1979" hidden />
+														<label for="build-11">1960-1979</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-12"
+															value="1941,1959" hidden />
+														<label for="build-12">1941-1959</label>
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-13"
+															value="1917,1940" hidden />
+														<label for="build-13">1917-1940</label> 
+													</li>
+													<li>
+														<input type="radio" name="years" id="build-14" value="1900,1917"
+															hidden />
+														<label for="build-14">до 1917</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+								<li class="filter-section" data-filter="years2">
+									<a class="filter-opener" href="#">год ремонта</a>
+									<span class="description">2000 - 2010</span>
+									<div class="filter-drop filter-drop-date">
+										<div class="range-slider">
+											<div class="filter-year">
+												<ul>
+													<li>
+														<input type="radio" name="years2" id="repair-1" checked value="2019,2019"
+															hidden />
+														<label for="repair-1">2019</label>
+													</li>
+													<li>
+														<input type="radio" name="years2" id="repair-2" value="2018,2018"
+															hidden />
+														<label for="repair-2">2018</label>
+													</li>
+													<li>
+														<input type="radio" name="years2" id="repair-3" value="2017,2017"
+															hidden />
+														<label for="repair-3">2017</label>
+													</li>
+													<li>
+														<input type="radio" name="years2" id="repair-4" value="2016,2016"
+															hidden />
+														<label for="repair-4">2016</label>
+													</li>
+													<li>
+														<input type="radio" name="years2" id="repair-5"
+															value="2010,2015" hidden />
+														<label for="repair-5">2010-2015</label>
+													</li>
+													<li>
+														<input type="radio" name="years2" id="repair-6"
+															value="2005,2010" hidden />
+														<label for="repair-6">2005-2010</label>
+													</li>
+													<li>
+														<input type="radio" name="years2" id="repair-7"
+															value="2000,2004" hidden />
+														<label for="repair-7">2000-2004</label>
+													</li>
+													<li>
+														<input type="radio" name="years2" id="repair-8" value="2000"
+															hidden />
+														<label for="repair-8">до 2000</label>
+													</li>
+												</ul>
+											</div>
+											<!--<div class="range-slider-title">
+													<label for="ydate">Год ремонта:</label>
+													<input type="text" id="ydate" class="input-range" readonly name="years">
+													<span class="range-slider-number" id="ydate-title"></span>
+												</div>
+												<div id="range-slider-date" data-min="1980" data-max="2019" data-values="1980,2015"></div>
+												<div class="range-slider-selects">
+													<div class="range-select">
+														<select>
+															<option>1980</option>
+															<option>2000</option>
+															<option>2019</option>
+														</select>
+													</div>
+													<div class="range-select">
+														<select>
+															<option>1980</option>
+															<option>2000</option>
+															<option>2019</option>
+														</select>
+													</div>
+												</div>-->
+										</div>
+										<div class="text-center">
+											<a href="#" class="btn btn-primary confirm">ок</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div class="filter-bar">
+						<div class="filter-bar-l">
+							<a href="#" class="filter-map-link"><i class="icon-filter"></i> К СПИСКУ ОБЪЕКТОВ </a>
+						</div>
+						<div class="filter-bar-btn">
+							<button type="button"
+								class="btn btn-default filter-bar-submit filter-submit filter-open">найти</button>
+							<button type="button" class="btn btn-default filter-bar-opener filter-open">изменить
+								параметры поиска</button>
+						</div>
+						<div class="filter-bar-r">
+							<button type="button" class="filter-clear"><i class="icon-reset-param"></i> Сбросить
+								параметры</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filter-mob-bar">
+				<button type="button" class="filter-menu-opener btn btn-default">изменить параметры поиска</button>
+			</div>
+		</div>
+		<main class="main-tw">
+			<div class="main-tw-content">
+				<ul class="bread-crumbs">
+					<li><a href="index.html">Главная страница</a></li>
+					<li><a href="#">Квартиры</a></li>
+					<li>Просторная квартира в центре</li>
+				</ul>
+				<h1 class="sr-only">Просторная квартира в центре</h1>
+				<ul class="filter-tags">
+					<li class="filter-tags-item">
+						<input type="checkbox" id="tag16" data-type="years2" value="2019,2019">
+						<label for="tag16">2019,2019</label>
+						<button type="button" class="filter-tags-close"><i class="icon-cancel"></i></button>
+					</li>
+					<li class="filter-tags-item">
+						<input type="checkbox" id="tag17" data-type="years2" value="2019">
+						<label for="tag17">2019</label>
+						<button type="button" class="filter-tags-close"><i class="icon-cancel"></i></button>
+					</li>
+					<li class="filter-tags-item">
+						<input type="checkbox" id="tag12" data-type="condition" value="С ремонтом">
+						<label for="tag12">В стадии строительства</label>
+						<button type="button" class="filter-tags-close"><i class="icon-cancel"></i></button>
+					</li>
+					<li class="filter-tags-item">
+						<input type="checkbox" id="tag1" checked data-type="type" value="2">
+						<label for="tag1">2+ Комнаты</label>
+						<button type="button" class="filter-tags-close"><i class="icon-cancel"></i></button>
+					</li>
+					<li class="filter-tags-item">
+						<input type="checkbox" id="tag2" checked data-type="type" value="Кухня студия">
+						<label for="tag2">Студия</label>
+						<button type="button" class="filter-tags-close"><i class="icon-cancel"></i></button>
+					</li>
+					<li class="filter-tags-item">
+						<input type="checkbox" id="tag3" checked data-type="area">
+						<label for="tag3">50 - 90 <span>м2</span> </label>
+						<button type="button" class="filter-tags-close"><i class="icon-cancel"></i></button>
+					</li>
+					<li class="filter-tags-item">
+						<input type="checkbox" id="tag4" checked data-type="price">
+						<label for="tag4">$120.000 - $250 000</label>
+						<button type="button" class="filter-tags-close"><i class="icon-cancel"></i></button>
+					</li>
+				</ul>
+				<div class="event-sorter">
+					<span>844 объекта отсортированы</span>
+					<select class="sorter custom-sel">
+						<option value="0"> по умолчанию</option>
+						<option value="descending" selected> по убыванию цены</option>
+						<option value="increase"> по возрастанию цены</option>
+					</select>
+				</div>
+				<div class="event-list event-list-single">
+					<div class="event-item">
+						<a href="#" class="event-item-img">
+							<img src="img/img-02.jpg" alt="image description">
+							<span class="event-location">
+								<i class="icon-pin"></i>
+								Центр
+							</span>
+						</a>
+						<div class="event-item-text">
+							<div class="event-item-content">
+								<div class="event-item-content-head">
+									<h3><a href="#">Просторная квартира в центре</a></h3>
+									<a href="#" class="event-favorites" data-id="id-01">
+										<i class="icon-star-outline"></i>
+									</a>
+								</div>
+								<strong class="event-price">$125 000</strong>
+								<ul class="event-contact">
+									<li>
+										<i class="icon-apartments"></i>
+										ЖК «Дуэт»
+									</li>
+									<li>
+										<i class="icon-pin"></i>
+										ул. Дарвина, 41
+									</li>
+								</ul>
+							</div>
+							<ul class="event-option">
+								<li>
+									<a href="#">
+										<i class="icon-area"></i>
+										65
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-bed"></i>
+										2
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-shower"></i>
+										1
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-floor"></i>
+										7/12
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="event-item event-item-sales">
+						<a href="#" class="event-item-img">
+							<img src="img/img-02.jpg" alt="image description">
+							<span class="event-location">
+								<i class="icon-pin"></i>
+								Центр
+							</span>
+						</a>
+						<div class="event-item-text">
+							<div class="event-item-content">
+								<div class="event-item-content-head">
+									<h3><a href="#">Просторная квартира в центре</a></h3>
+									<a href="#" class="event-favorites" data-id="id-02">
+										<i class="icon-star-outline"></i>
+									</a>
+								</div>
+								<strong class="event-price">продано</strong>
+								<ul class="event-contact">
+									<li>
+										<i class="icon-apartments"></i>
+										ЖК «Дуэт»
+									</li>
+									<li>
+										<i class="icon-pin"></i>
+										ул. Дарвина, 41
+									</li>
+								</ul>
+							</div>
+							<ul class="event-option">
+								<li>
+									<a href="#">
+										<i class="icon-area"></i>
+										65
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-bed"></i>
+										2
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-shower"></i>
+										1
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-floor"></i>
+										7/12
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="event-item">
+						<a href="#" class="event-item-img">
+							<img src="img/img-02.jpg" alt="image description">
+							<span class="event-location">
+								<i class="icon-pin"></i>
+								Центр
+							</span>
+						</a>
+						<div class="event-item-text">
+							<div class="event-item-content">
+								<div class="event-item-content-head">
+									<h3><a href="#">Просторная квартира в центре</a></h3>
+									<a href="#" class="event-favorites" data-id="id-03">
+										<i class="icon-star-outline"></i>
+									</a>
+								</div>
+								<strong class="event-price">$125 000</strong>
+								<ul class="event-contact">
+									<li>
+										<i class="icon-apartments"></i>
+										ЖК «Дуэт»
+									</li>
+									<li>
+										<i class="icon-pin"></i>
+										ул. Дарвина, 41
+									</li>
+								</ul>
+							</div>
+							<ul class="event-option">
+								<li>
+									<a href="#">
+										<i class="icon-area"></i>
+										65
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-bed"></i>
+										2
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-shower"></i>
+										1
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-floor"></i>
+										7/12
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="event-item">
+						<a href="#" class="event-item-img">
+							<img src="img/img-02.jpg" alt="image description">
+							<span class="event-location">
+								<i class="icon-pin"></i>
+								Центр
+							</span>
+						</a>
+						<div class="event-item-text">
+							<div class="event-item-content">
+								<div class="event-item-content-head">
+									<h3><a href="#">Просторная квартира в центре</a></h3>
+									<a href="#" class="event-favorites" data-id="id-04">
+										<i class="icon-star-outline"></i>
+									</a>
+								</div>
+								<strong class="event-price">$125 000</strong>
+								<ul class="event-contact">
+									<li>
+										<i class="icon-apartments"></i>
+										ЖК «Дуэт»
+									</li>
+									<li>
+										<i class="icon-pin"></i>
+										ул. Дарвина, 41
+									</li>
+								</ul>
+							</div>
+							<ul class="event-option">
+								<li>
+									<a href="#">
+										<i class="icon-area"></i>
+										65
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-bed"></i>
+										2
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-shower"></i>
+										1
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-floor"></i>
+										7/12
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="event-item">
+						<a href="#" class="event-item-img">
+							<img src="img/img-02.jpg" alt="image description">
+							<span class="event-location">
+								<i class="icon-pin"></i>
+								Центр
+							</span>
+						</a>
+						<div class="event-item-text">
+							<div class="event-item-content">
+								<div class="event-item-content-head">
+									<h3><a href="#">Просторная квартира в центре</a></h3>
+									<a href="#" class="event-favorites" data-id="id-05">
+										<i class="icon-star-outline"></i>
+									</a>
+								</div>
+								<strong class="event-price">$125 000</strong>
+								<ul class="event-contact">
+									<li>
+										<i class="icon-apartments"></i>
+										ЖК «Дуэт»
+									</li>
+									<li>
+										<i class="icon-pin"></i>
+										ул. Дарвина, 41
+									</li>
+								</ul>
+							</div>
+							<ul class="event-option">
+								<li>
+									<a href="#">
+										<i class="icon-area"></i>
+										65
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-bed"></i>
+										2
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-shower"></i>
+										1
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-floor"></i>
+										7/12
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<nav class="navigation pagination" role="navigation">
+					<div class="nav-links">
+						<a class="prev page-numbers" href="#">Предыдущая</a>
+						<a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Страница </span>1</a>
+						<span class="page-numbers current"><span class="meta-nav screen-reader-text">Страница
+							</span>2</span>
+						<span class="page-numbers dots">…</span>
+						<a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Страница </span>3</a>
+						<a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Страница </span>4</a>
+						<a class="next page-numbers" href="#">Следующая</a>
+					</div>
+				</nav>
+			</div>
+			<div class="main-tw-map">
+				<script>
+					var data = [
+						{
+
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.9762, 36.2637],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '2/12',
+							'location': 'Пятихатки',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.6742, 36.2637],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 100000,
+							'floor': '7/12',
+							'location': 'Пятихатки',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.9745, 36.2637],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 10000,
+							'floor': '7/12',
+							'location': 'Пятихатки',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.9712, 36.2637],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 20000,
+							'floor': '7/12',
+							'location': 'Центр',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.9642, 36.3637],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '7/1',
+							'location': 'Пятихатки',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.9713, 36.2437],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '7/12',
+							'location': 'Центр',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.9778, 36.2637],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '7/12',
+							'location': 'Центр',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.956987, 36.306967],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '7/12',
+							'location': 'Центр',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.922987, 36.306967],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '7/12',
+							'location': 'Центр',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.933987, 36.306967],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '7/12',
+							'location': 'Центр',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						},
+						{
+							'href': 'https://topestate.com.ua/properties/kvartira-v-zhk-gvardejskij/',
+							'pic': 'img/img-02.jpg',
+							'coordinates': [49.944987, 36.306967],
+							'title': 'Квартира в ЖК “Гвардейский”',
+							'tag': 'Жилстрой 2 в 3 комнатные',
+							'rooms': 2,
+							'baths': 2,
+							'beds': 3,
+							'size': 105,
+							'price': 200000,
+							'floor': '7/12',
+							'location': 'Центр',
+							'complex': 'ЖК «Дуэт»',
+							'address': 'ул. Дарвина, 41'
+						}
+
+					]
+
+					var districts = [
+						{
+							'name': 'Киевский',
+						},
+						{
+							'name': 'Слободской',
+
+						},
+						{
+							'name': 'Холодногорский',
+						}
+					]
+					var path1 = 'http://localhost:3000/';
+				</script>
+				<div id="map" style="width: 100%; height: 400px" data-icon="./img/leaflet/marker-icon_bl.png"
+					data-icon-geolocation-btn="./img/location.svg" data-icon-geolocation-pin="img/location.svg">
+				</div>
+				<form action="#" id="form-favorites" method="POST" style="display: none;">
+					<input type="text" class="f-values" name="fav-id">
+				</form>
+			</div>
+		</main>
+		<footer class="footer">
+			<button type="button" class="anchor-top">
+				<i class="icon-arrow"></i>
+			</button>
+			<div class="footer-top">
+				<div class="container container-sm">
+					<div class="footer-row footer-nav">
+						<div class="footer-col">
+							<h3>Сменить валюту</h3>
+							<form action="/" class="currency-change" method="POST">
+								<select class="select_wh custom-sel" name="currency">
+									<option value="usd">usd</option>
+									<option value="ua">uah</option>
+									<option value="euro">Eur</option>
+								</select>
+							</form>
+							<ul class="links-list">
+								<li>
+									<a href="#" title="Разместить квартиру">Разместить квартиру</a>
+								</li>
+								<li>
+									<a href="#" title="Карта сайта">Карта сайта</a>
+								</li>
+								<li>
+									<a href="#" title="Архив">Архив</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-col">
+							<h3 class="footer-nav-opener">Меню</h3>
+							<ul class="footer-links footer-nav-slide">
+								<li>
+									<a href="#">О компании</a>
+								</li>
+								<li>
+									<a href="#">Для продавца</a>
+								</li>
+								<li>
+									<a href="#">Для покупателя</a>
+								</li>
+								<li>
+									<a href="#">Для застройщика</a>
+								</li>
+								<li>
+									<a href="#">Застройщики Украины</a>
+								</li>
+								<li>
+									<a href="#">Жилые комплексы</a>
+								</li>
+								<li>
+									<a href="#">Блог</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-col">
+							<h3 class="footer-nav-opener">Квартиры </h3>
+							<ul class="footer-links footer-nav-slide">
+								<li>
+									<a href="#">1 комнатные</a>
+								</li>
+								<li>
+									<a href="#">2-х комнатные</a>
+								</li>
+								<li>
+									<a href="#">3-х комнатные</a>
+								</li>
+								<li>
+									<a href="#">4-х комнатные</a>
+								</li>
+								<li>
+									<a href="#">Студии</a>
+								</li>
+								<li>
+									<a href="#">Пентхаусы</a>
+								</li>
+								<li>
+									<a href="#">Премиум класс</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-col">
+							<h3 class="footer-nav-opener">Контакты</h3>
+							<div class="footer-nav-slide">
+								<ul class="footer-contacts">
+									<li>
+										<a href="#" title="г. Харьков, ул. Полтавский шлях, 9">
+											<i class="icon-home" style="font-size: 15px"></i>
+											г. Харьков, ул. Полтавский шлях, 9
+										</a>
+									</li>
+									<li>
+										<a href="tel:+38 (063) 106 76 76" title="+38 (063) 106 76 76">
+											<i class="icon-call" style="font-size: 15px"></i>
+											+38 (063) 106 76 76
+										</a>
+									</li>
+									<li>
+										<a href="mailto:info@topestate.com.ua" title="info@topestate.com.ua">
+											<i class="icon-mail" style="font-size: 12px"></i>
+											info@topestate.com.ua
+										</a>
+									</li>
+								</ul>
+								<ul class="social-networks">
+									<li><a href="#" title="facebook"><i class="icon-facebook"></i></a></li>
+									<li><a href="#" title="instagram"><i class="icon-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+
+				<div class="container container-sm">
+					<div class="footer-row">
+						<p class="develop">
+							Разработано
+							<a href="#">Seanetix</a>
+						</p>
+						<p class="copyright">© 2019 <span class="ws-nowrap">«Top Estate».</span> Все права защищены.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="info-popup" id="popup1">
+			<h2>Обратный звонок</h2>
+			<p>Напишите ваш номер телефона и мы вам перезвоним!</p>
+			<form action="#" class="call-form">
+				<div class="call-form-row">
+					<div class="call-form-col">
+						<input type="text" class="call-form-field" placeholder="Ваше имя" title="Введите имя">
+					</div>
+					<div class="call-form-col">
+						<input type="text" class="call-form-field" placeholder="+38 (___)  ___ - __ - __"
+							title="Введите номер телефона" data-mask="+38 (___)  ___ - __ - __">
+					</div>
+				</div>
+				<a href="#" onclick="alert('Спасибо!');" class="btn btn-default">отправить</a>
+			</form>
+		</div>
+		<div class="info-popup" id="popup4">
+			<h2>Онлайн оценка</h2>
+			<p>Напишите ваш номер телефона и мы вам перезвоним!</p>
+			<form action="#" class="call-form">
+				<div class="call-form-row">
+					<div class="call-form-col">
+						<input type="text" class="call-form-field" placeholder="Ваше имя" title="Введите имя">
+					</div>
+					<div class="call-form-col">
+						<input type="text" class="call-form-field" placeholder="+38 (___)  ___ - __ - __"
+							title="Введите номер телефона" data-mask="+38 (___)  ___ - __ - __">
+					</div>
+				</div>
+				<a href="#" onClick="doSomething(); return false;" class="btn btn-default">отправить</a>
+			</form>
+		</div>
+		<div class="info-popup thanks-call" id="popup6">
+			<h2>Спасибо!</h2>
+			<p>Ваши данные отправлены. <br> Мы перезвоним Вам в ближайшее время</p>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script>
+		var favId = JSON.parse(localStorage.getItem('favorites'));
+
+		if (favId !== null && favId.length > 0) {
+			document.addEventListener('DOMContentLoaded', function () {
+				var form = document.querySelector('#form-favorites');
+				var input = form.querySelector('.f-values');
+				input.value = favId;
+				//form.submit();
+			});
+		}
+	</script>
+
+</body>
+
+</html>

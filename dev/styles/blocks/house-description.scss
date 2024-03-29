@@ -1,0 +1,177 @@
+.house-description {
+	margin-bottom: 110px;
+
+	p {
+		margin: 0;
+	}
+
+	.table-wrap {
+		overflow-x: auto;
+	}
+
+	.table-description {
+		min-width: 890px;
+	}
+
+	.table-caption {
+		display: flex;
+		padding: 8px 30px 8px 7px;
+		border-bottom: solid 1px #d1d1d1;
+
+		.item {
+			width: 25%;
+
+			p {
+				color: #959595;
+
+				span {
+					position: relative;
+					width: 10px;
+					height: 16px;
+					display: inline-block;
+
+					&:before,
+					&:after {
+						font-family: 'icomoon';
+					    font-size: 6px;
+					    line-height: 1;
+					    position: absolute;
+					    color: #909090;
+					    content: "\e902";
+					}
+
+					&:before {
+					    bottom: 0;
+					    right: 0;
+					}
+
+					&:after {
+						top: 0;
+					    right: 0;
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
+
+	.table-body {
+		.table-info {
+			position: relative;
+
+			&:nth-child(2n) {
+				background: #f6f5f5;
+			}
+		}
+
+		.table-tr {
+			display: flex;
+			padding: 16px 30px 16px 7px;
+			border-bottom: solid 1px #d1d1d1;
+
+			.item {
+				width: 25%;
+			}
+		}
+
+		.spoiler {
+			.block-flex {
+				padding: 16px 25px;
+				display: flex;
+				border-bottom: solid 1px #d1d1d1;
+			}
+		}
+
+		.apartment-plan {
+			width: 20%;
+			text-align: center;
+		}
+
+		.floor-plan {
+			width: 30%;
+		}
+
+		.add-info {
+			width: 20%;
+		}
+
+		.contact-table {
+			width: 30%;
+			text-align: center;
+
+			h5 {
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+
+			a {
+				text-decoration: none;
+				color: #404852;
+				display: inline-block;
+				margin-bottom: 12px;
+
+				&.btn {
+					color: #fff;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	sup {
+		font-size:70%;
+		vertical-align:super;
+	}
+
+	.press {
+		display: none;
+	}
+
+	.spoiler > .block {
+		display: none;
+	}
+
+	.spoiler > input:checked + .block {
+		display: block;
+	}
+
+	label {
+		position: absolute;
+		top: 16px;
+		right: 19px;
+		display: inline-block;
+		height: 23px;
+		width: 10px;
+
+		&:before {
+			font-family: 'icomoon';
+			font-size: 6px;
+			line-height: 1;
+			position: absolute;
+			color: #33384c;
+			content: "\e902";
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+		}
+	}
+
+	label:hover {
+		cursor: pointer;
+	}
+
+	@media (min-width: 576px) {
+		padding: 0 30px;
+	}
+
+	@media (max-width: 991px) {
+		margin-bottom: 50px;
+	}
+}

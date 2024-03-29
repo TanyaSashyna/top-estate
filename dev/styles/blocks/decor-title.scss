@@ -1,0 +1,36 @@
+.decor-title {
+  border-radius: 5px;
+  background: #33384c;
+  padding: 15px;
+  margin: 20px 0;
+
+  h3 {
+    font-family: 'CenturyGothic', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  &.price-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      color: #f0f0f0;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 15px 41px;
+  }
+  @media (max-width: 767px) {
+    &.price-title {
+      flex-direction: column;
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.filter-currency{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .currency {
+        &-item {
+            label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 47px;
+                height: 36px;
+                border: solid 1px #c1af8b;
+                transition: all 0.2s linear;
+                cursor: pointer;
+                background: transparent;
+                color: #f0f0f0;
+                font-size: 14px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: #c1af8b;
+                }
+            }
+
+            input:checked + label {
+                background: #c1af8b;
+            }
+        }
+    }
+}

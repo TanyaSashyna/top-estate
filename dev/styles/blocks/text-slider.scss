@@ -1,0 +1,32 @@
+.text-slider {
+	max-height: 85px; 
+	padding: 46px 30px 0;
+	overflow: hidden;
+	text-align: justify;
+	&-item {
+		position: relative;
+	}
+	span {
+		display: block;
+	}
+	&-slide {
+		margin: -10px 0 0;
+	}
+	@media (max-width: 767px) {
+		max-height: 75px;
+		padding: 40px 0 0;
+	}
+	&.active {
+		.text-slider-opener {
+			display: none;
+		}
+	}
+}
+
+.card-specifications {
+	.text-slider {
+		span {
+			display: inline;
+		}
+	}
+}

@@ -1,0 +1,396 @@
+.need-flat {
+	&__popup {
+		&.fancybox-content {
+			background: transparent;
+		}
+
+		.fancybox-button {
+			width: 66px;
+			height: 66px;
+			top: -20px;
+			right: 0;
+			color: #ffffff;
+		}
+
+		&.info-popup {
+			width: 1203px;
+			padding: 0 50px;
+		}
+
+		.need-flat-wrap {
+			max-width: 850px;
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+    		flex-wrap: wrap;
+		}
+
+		.form-wrap {
+			width: 295px;
+			height: 311px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			padding: 44px 30px 57px;
+
+			h4 {
+				color: #33384c;
+				font-family: 'CenturyGothic', Arial, sans-serif;
+				font-weight: 600;
+				margin-bottom: 9px;
+			}
+
+			p {
+				color: #33384c;
+				font-family: 'CenturyGothic', Arial, sans-serif;
+				font-size: 12px;
+				margin-bottom: 9px;
+				text-align: left;
+			}
+
+			.control-field-col {
+				margin-bottom: 10px; 
+			}
+
+			.control-field {
+				border: solid 1px #58607e;
+  				background-color: #ffffff;
+  				text-align: left;
+  				font-size: 15px;
+  				font-family: 'CenturyGothic', Arial, sans-serif;
+  				color: #828282;
+  				padding: 10px 15px;
+  				width: 100%;
+
+  				&::placeholder {
+  					text-align: left;
+  					font-size: 15px;
+  					font-family: 'CenturyGothic', Arial, sans-serif;
+  					color: #828282;
+  				}
+			}
+
+			.btn {
+				width: 100%;
+			}
+		}
+
+		.form-caption {
+			position: relative;
+			max-width: 555px;
+    		width: 100%;
+    		order: 2;
+
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-size: contain;
+			}
+
+			h3 {
+				font-size: 25px;
+				font-weight: 900;
+				color: #33384c;
+				margin-top: 65px;
+				margin-bottom: 10px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-size: 35px;
+				font-weight: 900;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+
+		.pick-up {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 220px;
+			height: 60px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: contain;
+
+			span {
+				font-size: 18px;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__one {
+		padding: 45px 20px;
+		min-height: 671px;
+		max-width: 1103px;
+		width: 100%;
+		background-image: url(../img/interior-1.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		.form-wrap {
+			order: 1;
+			background-image: url(../img/group-1.png);
+		}
+
+		.form-caption {
+			order: 2;
+
+			&:before {
+				top: 95px;
+				left: 5px;
+				width: 110px;
+				height: 43px;
+				background-image: url(../img/fill-arrow.svg);
+			}
+
+			p {
+				color: #f64645;
+			}
+		}
+
+		.pick-up {
+			background-image: url(../img/frame.svg);
+			transform: rotate(15deg);
+			margin-left: auto;
+
+			span {
+				color: #33384c;
+			}
+		}
+	}
+
+	&__two {
+		padding: 60px 20px 45px;
+		min-height: 635px;
+		max-width: 1092px;
+		width: 100%;
+		background-image: url(../img/interior-2.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		.form-wrap {
+			background-image: url(../img/group-2.png);
+			background-size: contain;
+			order: 2;
+		}
+
+		.form-caption {
+			order: 1;
+    		
+			&:before {
+				top: 110px;
+				right: 5px;
+				width: 81px;
+				height: 37px;
+				background-image: url(../img/fill-arrow-2.svg);
+			}
+
+			p {
+				color: #bc1111;
+			}
+		}
+
+		.pick-up {
+			background-image: url(../img/frame-2.svg);
+			transform: rotate(-15deg);
+			margin: 0 auto;
+
+			span {
+				color: #aa0d20;
+			}
+		}
+		& + .fancybox-button {
+			top: -5px;
+		}
+	}
+
+	&__three {
+		padding: 50px 20px 45px;
+		min-height: 692px;
+		max-width: 1078px;
+		width: 100%;
+		background-image: url(../img/interior-3.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+		.form-wrap {
+			order: 1;
+			background-image: url(../img/group-1.png);
+		}
+
+		.form-caption {
+			order: 2;
+
+			&:before {
+				top: 120px;
+				left: 5px;
+				width: 110px;
+				height: 43px;
+				background-image: url(../img/fill-arrow.svg);
+			}
+
+			h3 {
+				margin-top: 85px;
+			}
+
+			p {
+				color: #aa0d20;
+			}
+		}
+
+		.pick-up {
+			background-image: url(../img/frame-2.svg);
+			transform: rotate(15deg);
+			margin: 0 auto;
+
+			span {
+				color: #aa0d20;
+			}
+		}
+
+		& + .fancybox-button {
+			top: -5px;
+		}
+	}
+
+	@media (max-width: 1001px) {
+		&__popup {
+			.need-flat-wrap {
+				justify-content: center;
+			}
+			.form-caption {
+				h3 {
+					margin-top: 0;
+				}
+
+				p {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		&__one {
+			.form-wrap {
+				order: 2;
+			}
+
+			.form-caption {
+				order: 1;
+
+				&:before {
+					left: initial;
+					right: 0;
+					transform: rotate(-80deg);
+				}
+			}
+			.pick-up {
+				transform: rotate(1deg);
+    			margin: 0 auto 10px;
+			}
+		}
+
+		&__two {
+			.form-caption {
+				&:before {
+					transform: rotate(90deg);
+				    right: initial;
+				    left: 10px;
+				}
+			}
+			.pick-up {
+				transform: rotate(0);
+				margin-bottom: 10px;
+			}
+		}
+
+		&__three {
+			.form-wrap {
+				order: 2;
+			}
+			.form-caption {
+				order: 1;
+
+				&:before {
+					left: initial;
+					right: 0;
+					transform: rotate(-80deg);
+				}
+			}
+			.pick-up {
+				transform: rotate(1deg);
+    			margin: 0 auto 10px;
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		&__popup {
+			&.info-popup {
+				padding: 20px 0;
+			}
+
+			.form-wrap {
+				padding: 40px 25px 45px;
+
+				p {
+					font-size: 11px;
+				}
+			}
+			.form-caption {
+
+				&:before {
+					display: none;
+				}
+
+				h3 {
+					font-size: 18px;
+				}
+
+				p {
+					font-size: 25px;
+				}
+			}
+
+			.fancybox-button {
+				width: 46px;
+				height: 46px;
+				right: 0;
+				color: #000000;
+				top: 20px;
+			}
+		}
+
+		&__one {
+			min-height: auto;
+			padding: 30px 10px;
+		}
+
+		&__two {
+			padding: 50px 10px;
+			min-height: auto;
+			
+			.form-wrap {
+				padding: 50px 25px 45px;
+			}
+
+			& + .fancybox-button {
+				top: 30px;
+			}
+		}
+
+		&__three {
+			padding: 50px 10px;
+			min-height: auto;
+
+			& + .fancybox-button {
+				top: 30px;
+			}
+		}
+	}
+}

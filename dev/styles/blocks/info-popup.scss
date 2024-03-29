@@ -1,0 +1,51 @@
+.info-popup {
+	display: none;
+	width: 832px;
+	text-align: center;
+	h2 {
+		font-family: 'CenturyGothic Bold', Arial, sans-serif;
+		font-size: 25px;
+		line-height: 1.1;
+		color: #33384c;
+		margin: 0 0 28px;
+	}
+	p {
+		color: #33384c;
+		font-family: 'CenturyGothic', Arial, sans-serif;
+		font-size: 15px;
+		line-height: 1.47;
+		margin: 0 0 43px;
+	}
+	&.expert-call {
+		p {
+			font-size: 14px;
+			line-height: (22/14);
+			margin-bottom: 33px;
+			strong {
+				font-family: 'CenturyGothic Bold', Arial, sans-serif;
+				font-weight: normal;
+			}
+		}
+	}
+	&.thanks-call {
+		width: 487px;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	@media (max-width: 767px) {
+		padding: 20px;
+		h2 {
+			font-size: 22px;
+			margin-bottom: 15px;
+		}
+		p {
+			margin-bottom: 15px;
+		}
+		&.expert-call {
+			p {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

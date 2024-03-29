@@ -1,0 +1,186 @@
+.you-get {
+  position: relative;
+
+  .airplane-four,
+  .airplane-three {
+    display: none;
+  }
+
+  .title-get {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100px;
+      height: 1px;
+      margin: 0 auto;
+      background: #b9a787;
+    }
+  }
+
+  .content {
+    display: block;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      padding-right: 0;
+      padding-bottom: 30px;
+
+      img {
+        object-fit: contain;
+        margin: 0 auto;
+      }
+
+      .review-2 {
+        width: 91px;
+        height: 109px;
+      }
+
+      .investor {
+        width: 123px;
+        height: 109px;
+      }
+
+      .value-1 {
+        width: 100px;
+        height: 101px;
+      }
+
+      .campaign {
+        width: 108px;
+        height: 109px;
+      }
+    }
+
+    .info-list {
+      display: flex;
+      align-items: center;
+
+      ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding-top: 40px;
+        padding-left: 0;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: initial;
+          left: 0;
+          margin: 0 auto;
+          width: 120px;
+          height: 1px;
+          background: #b9a787;
+        }
+
+        li {
+          position: relative;
+          padding-left: 48px;
+
+          &:not(:last-child) {
+            margin-bottom: 22px;
+          }
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            margin-top: -1px;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+            width: 21px;
+            height: 14px;
+            background-image: url('../img/verified.svg');
+            @include settings-bg;
+          }
+
+          a {
+            text-decoration: none;
+            color: #404852;
+            border-bottom: 1px dashed #404852;
+
+            .no-touch & {
+              &:hover {
+                color: #c1af8b;
+                border-color: #c1af8b;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 991px) {
+    .airplane-four {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .airplane-three {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -150px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      max-width: 795px;
+      margin: 0 auto;
+      display: flex;
+
+      .icon {
+        padding-right: 44px;
+        padding-bottom: 0;
+        flex-shrink: 0;
+
+        .review-2,
+        .investor,
+        .value-1 {
+          margin: 0;
+        }
+      }
+
+      .info-list {
+        ul {
+          padding-top: 0;
+          padding-left: 40px;
+
+          &:after {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: initial;
+            width: 1px;
+            margin: 0;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

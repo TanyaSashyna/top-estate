@@ -1,0 +1,77 @@
+.plans-prices {
+	margin-bottom: 30px;
+	
+	.table-wrap {
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		min-width: 845px;
+
+		td {
+
+		}
+
+		tr th {
+			width: 25%;
+			color: #959595;
+			padding: 8px 0;
+			text-align: left;
+
+			sup {
+				font-size:70%;
+				vertical-align:super;
+			}
+		}
+
+		tr td {
+			width: 25%;
+			color: #404852;
+			padding: 15px 0;
+			border: 0;
+    		vertical-align: middle;
+			border-top: 1px solid #d1d1d1;
+			text-align: left;
+
+			sup {
+				font-size:70%;
+				vertical-align:super;
+			}
+
+			span {
+				color: #959595;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+
+	.btn-offers {
+		text-decoration: none;
+		display: inline-block;
+		font-size: 15px;
+		color: #ffffff;
+		font-family: 'CenturyGothic', Arial, sans-serif;
+		padding: 10px 20px;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
+		border-radius: 5px;
+		background: #58607e;
+
+		&:hover {
+			background: #434b67;
+		}
+
+		span {
+			color: #ffffff;
+		}
+	}
+
+	@media (min-width: 576px) {
+		padding: 0 30px;
+	}
+}

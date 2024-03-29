@@ -1,0 +1,23 @@
+.services-certificate {
+  max-width: 855px;
+  margin: 0 auto;
+
+  p {
+    text-align: center;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .btn-block {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  @media (min-width: 768px) {
+    .btn-block {
+      padding: 60px 0 110px;
+    }
+  }
+}

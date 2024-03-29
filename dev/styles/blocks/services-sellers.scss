@@ -1,0 +1,30 @@
+.services-sellers {
+  padding-top: 10px;
+  padding-bottom: 28px;
+  text-align: center;
+  p.description {
+    margin-bottom: 26px;
+    line-height: 1.25;
+    text-align: center;
+  }
+  p {
+    color: #404852;
+  }
+  h1 {
+  	margin-bottom: 57px;
+  }
+  @media (max-width: 767px) {
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+  	h1 {
+  		margin-bottom: 25px;
+  	}
+  }
+}
+
+p.description {
+  margin-bottom: 26px;
+  line-height: 1.25;
+  text-align: center;
+  color: #404852;
+}

@@ -1,0 +1,27 @@
+.favorites-link {
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.2;
+	font-family: 'CenturyGothic', Arial, sans-serif;
+	display:inline-block;
+	vertical-align:top;
+	padding: 4px 0 2px 34px;
+	text-decoration: none;
+	position: relative;
+	margin: 0 0 13px;
+	&:before {
+		font-family: 'icomoon';
+		font-size: 19px;
+		line-height: 1;
+		position:absolute;
+		top:0;
+		left:0;
+		color: #c1af8b;
+		content: "\e912";
+	}
+	.no-touch & {
+		&:hover {
+			color: #c1af8b;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+.profitable-offer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 25px;
+
+	.profitable-text,
+	.profitable-wrap {
+		width: 100%;
+	}
+
+	.profitable-text {
+		margin-bottom: 20px;
+
+		p {
+			text-align: center;
+			color: #959595;
+			margin: 0;
+		}
+	}
+
+	.profitable-wrap {
+		display: flex;
+		flex-wrap: wrap;
+
+		.item {
+			width: 100%;
+			padding: 0 10px;
+			color: #121212;
+			font-weight: 700;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			.installment-plan,
+			.credit {
+				display: flex;
+				height: 100%;
+				align-items: center;
+				padding: 20px 15px;
+				border-radius: 6px;
+			}
+
+			.installment-plan {
+				background-color: rgba(236, 198, 71, 0.36);
+
+				ul li {
+					&:not(:last-child) {
+						margin-bottom: 5px;
+					}
+				}
+			}
+
+			.credit {
+				background-color: rgba(185, 232, 137, 0.36);
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		.profitable-text {
+			width: 45%;
+			margin-bottom: 0;
+
+			p {
+				max-width: 365px;
+				text-align: left;
+			}
+		}
+		.profitable-wrap {
+			width: 55%;
+		}
+	}
+
+	@media (min-width: 576px) {
+		padding: 0 20px;
+
+		.profitable-text {
+			padding: 0 10px;
+		}
+
+		.profitable-wrap {
+			.item {
+				width: 50%;
+
+				&:not(:last-child) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		.profitable-wrap {
+			.item {
+				padding: 0;
+			}
+		}
+	}
+}

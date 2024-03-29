@@ -1,0 +1,51 @@
+.apartment-info {
+	display: flex;
+	padding: 33px 0;
+	&-item {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 20px;
+		text-align: center;
+	}
+	&-ico {
+		margin: 0 0 16px;
+		display: flex;
+		align-items: center;
+		min-height: 53px;
+		strong {
+			color: #404852;
+			font-size: 30px;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-left: 15px;
+			span {
+				font-size: 20px;
+				font-weight: normal;
+			}
+
+			span.slash {
+				font-size: 25px;
+			}
+		}
+	}
+	&-title {
+		display: block;
+		font-family: 'CenturyGothic', Arial, sans-serif;
+		font-size: 15px;
+		line-height: 1.2;
+		color: #959595;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	@media (max-width: 767px) {
+		flex-wrap: wrap;
+		padding: 20px 0 0;
+		&-item {
+			flex: none;
+			width: 50%;
+			padding-bottom: 20px;
+		}
+	}
+}

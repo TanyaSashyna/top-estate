@@ -1,0 +1,59 @@
+.application-form {
+  text-align: center;
+
+  p {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+
+    input {
+      width: 100%;
+      padding: 15px 10px;
+      border: none;
+      border-bottom: 1px solid #d1d1d1;
+      background: transparent;
+      text-align: center;
+
+      &::placeholder {
+        color: #a0a0a0;
+        transition: font-size .2s;
+      }
+
+      &:focus {
+        color: #404852;
+        &::placeholder {
+          font-size: 0;
+        }
+      }
+    }
+  }
+
+  .form-btn {
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .warn-text {
+    margin: 0;
+    font-size: 14px;
+    color: #959595;
+    line-height: normal;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+
+    a {
+      color: #959595;
+
+      .no-touch & {
+        &:hover {
+          color: #b9a787;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.card-photo {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -8px;
+
+	.card-address-map {
+		width: 100%;
+	}
+
+	.item {
+		width: 100%;
+		padding: 0 8px;
+
+		&:first-child {
+			margin-bottom: 15px;
+		}
+
+		&.item-image {
+			text-align: center;
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.item {
+			width: 50%;
+
+			&:first-child {
+				margin-bottom: 0;
+			}
+
+			&.item-image {
+				overflow: hidden;
+			}
+
+			img {
+				object-fit: cover;
+				max-width: none;
+			}		
+		}
+	}
+}

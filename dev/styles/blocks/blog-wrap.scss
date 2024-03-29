@@ -1,0 +1,69 @@
+.blog-wrap {
+  padding: 60px 0;
+
+  .event-head {
+    padding-bottom: 0;
+  }
+
+  .blog-content {
+    display: block;
+    margin-left: -8px;
+    margin-right: -8px;
+
+    .col-left {
+      padding: 0 8px 60px;
+    }
+
+    .col-right {
+      padding-bottom: 0;
+    }
+
+    .col-left,
+    .col-right {
+      width: 100%;
+    }
+
+    .articles,
+    .questions {
+      padding: 30px 23px;
+      background: #fff;
+    }
+    .questions {
+      margin-bottom: 40px;
+
+      .head {
+        text-align: center;
+        margin-bottom: 14px;
+
+        h3 {
+          font-weight: bold;
+          margin-bottom: 18px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #33384c;
+        }
+      }
+    }
+    
+    .btn-block {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .blog-content {
+      display: flex;
+
+      .col-left {
+        width: 65%;
+      }
+
+      .col-right {
+        width: 35%;
+        padding: 0 8px 60px;
+      }
+    }
+  }
+}

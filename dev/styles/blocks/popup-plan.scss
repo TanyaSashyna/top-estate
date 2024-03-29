@@ -1,0 +1,36 @@
+.popup-plan {
+    background: transparent;
+
+    .plan {
+        background: #fff;
+        padding: 15px;
+    }
+
+    .fancybox-button {
+        width: 46px;
+        height: 46px;
+        top: 10px;
+        right: 10px;
+        
+        svg {
+            color: #000;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .plan {
+            padding: 30px;
+        }
+
+        .fancybox-button {
+            width: 56px;
+            height: 56px;
+            top: 35px;
+            right: 0;
+
+            svg {
+                color: #fff;
+            }
+        }
+    }
+}

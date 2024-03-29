@@ -1,0 +1,263 @@
+.article-blog {
+  padding-bottom: 30px;
+  color: #33384c;
+
+  &.a-border {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-family: CenturyGothic Bold;
+    margin-bottom: 11px;
+
+    .more {
+      text-decoration: none;
+      color: #33384c;
+
+      .no-touch & {
+        &:hover {
+          color: #b9a787;
+        }
+      }
+    }
+  }
+
+  .info {
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    span {
+      font-family: CenturyGothic;
+      font-size: 14px;
+    }
+
+    img {
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 1px;
+      vertical-align: text-bottom;
+    }
+
+    .date {
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 10px;
+      font-family: CenturyGothic;
+      font-size: 14px;
+      color: #b3b2b2;
+    }
+
+    .time {
+      position: relative;
+      padding-right: 12px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background: #979797;
+      }
+
+      .icon-clock {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .comments {
+      padding-left: 12px;
+
+      .icon-comment {
+        width: 17px;
+        height: 15px;
+      }
+    }
+  }
+
+  .content {
+    display: block;
+
+    .image {
+      width: 100%;
+
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+        transition: transform .2s;
+      }
+
+      .more-img {
+        display: block;
+
+        .no-touch & {
+          &:hover {
+            img {
+              transform: scale(1.03);
+            }
+          }
+        }
+      }
+    }
+
+    .text-block {
+      width: 100%;
+      padding-left: 0;
+
+      p {
+        font-size: 14px;
+      }
+
+      .read-more {
+        position: static;
+        text-decoration: none;
+        font-weight: 600;
+        color: #c1af8b;
+
+        .no-touch & { 
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .article-text {
+    img {
+      padding-right: 0;
+      margin: 0 auto 30px;
+      float: none;
+    }
+
+    p {
+      margin-bottom: 30px;
+      text-align: justify;
+
+      &:last-child {
+        margin-bottom: 45px;
+      }
+    }
+
+    span {
+      display: block;
+      margin: 0 0 20px;
+      text-indent: 25px;
+      text-align: justify;
+    }
+
+    ul {
+      overflow: hidden;
+      margin: 0 0 20px;
+      li {
+        position: relative;
+        padding: 0 0 0 12px;
+        margin: 0 0 8px;
+        &::before {
+          content: '';
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #404852;
+          position: absolute;
+          top: 9px;
+          left: 0;
+        }
+      }
+      span {
+        margin: 0;
+        text-indent: 0; 
+      }
+    }
+
+    .share {
+      margin-bottom: 30px;
+    }
+
+    .social {
+      a {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 15px;
+        background: #58607e;
+        width: 47px;
+        height: 47px;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 47px;
+        font-size: 23px;
+        text-decoration: none;
+        img {
+          padding: 0;
+          float: none;
+        }
+      }
+      ul li {
+        display: inline-block;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        a {
+          display: block;
+
+          img {
+            padding: 0;
+            float: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    .info {
+      display: flex;
+      justify-content: space-between;
+
+      .date {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      display: flex;
+
+      .image {
+        width: 34%;
+
+        img {
+          margin: 0;
+        }
+      }
+
+      .text-block {
+        width: 66%;
+        padding-left: 18px;
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .article-text {
+      img {
+        max-width: 320px;
+        padding-right: 30px;
+        margin: 0;
+        float: left;
+      }
+    }
+  }
+}

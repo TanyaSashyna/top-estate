@@ -1,0 +1,38 @@
+.hero-gallery {
+	position: relative;
+	img {
+		width: 100%;
+	}
+	&-cn {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		width: 100%;
+		h2 {
+			color: #fff;
+			font-size: 42px;
+			line-height: 1.2;
+			font-family: 'Athelas Bold', Arial, sans-serif;
+			margin: 0 0 26px;
+			font-weight: normal;
+			letter-spacing: 1px;
+		}
+	}
+	&-btn {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		.btn {
+			margin: 0 10px 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	@media (max-width: 767px) {
+		&-cn {
+			display: none;
+		}
+	}
+}

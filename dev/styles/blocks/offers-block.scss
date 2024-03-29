@@ -1,0 +1,42 @@
+.offers {
+	&-wrap {
+		box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.64);
+		background-color: #33384c;
+		padding: 15px 0;
+		margin-bottom: 30px;
+	}
+	
+	&-block {
+		display: block;
+		text-align: center;
+
+		img {
+			margin: 0 auto;
+		}
+
+		h3 {
+			padding: 0 15px;
+			text-align: center;
+			color: #ffffff;
+			font-family: 'CenturyGothic', Arial, sans-serif;
+			font-weight: 400;
+			margin: 15px 0;
+		}
+	}
+
+	@media (min-width: 768px) {
+		&-wrap {
+			padding: 10px 0;
+		}
+
+		&-block {
+			display: flex;
+			align-items: center;
+    		justify-content: space-between;
+
+    		h3 {
+    			margin: 0;
+    		}
+		}
+	}
+}

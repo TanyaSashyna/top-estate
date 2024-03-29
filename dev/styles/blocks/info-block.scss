@@ -1,0 +1,27 @@
+.info-block {
+	padding-top: 81px;
+	padding-bottom: 47px;
+	&-content {
+		font-family: 'CenturyGothic', Arial, sans-serif;
+		font-size: 16px;
+		line-height: 1.56;
+		padding-bottom: 37px;
+		p {
+			margin-bottom: 22px;
+		}
+	}
+	@media (max-width: 1023px) {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 30px;
+		&-content {
+			font-size: 14px;
+			padding-bottom: 20px;
+			p {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

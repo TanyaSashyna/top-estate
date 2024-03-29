@@ -1,0 +1,20 @@
+.object-placement {
+  .airplane-one {
+    display: none;
+  }
+
+  .explanation {
+    max-width: 695px;
+    margin: 0 auto 47px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .airplane-one {
+      display: block;
+      position: absolute;
+      top: -81px;
+      left: 0;
+    }
+  }
+}
